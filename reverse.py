@@ -52,3 +52,22 @@ def main():
     print(string)
 
 main()
+#Sixth Method
+def reverse_words(text):
+    reversed_text = ""
+    word = ""
+
+    for char in text:
+        if char != " ":
+            word = char + word
+        else:
+            reversed_text += word + " "
+            word = ""
+
+    reversed_text += word  # Add the last word (without space)
+    
+    return reversed_text
+
+# Test case
+test = reverse_words("elbuod decaps sdrow")
+print(test)  # Output: "elbuod  decaps  sdrow"
